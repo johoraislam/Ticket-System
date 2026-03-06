@@ -1,0 +1,92 @@
+[
+  {
+    "id": "2001",
+    "title": "Email Notification Not Sending",
+    "description": "System fails to send email notifications after a new order is placed.",
+    "customer": "BrightTech Ltd",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-04-01T09:20:00Z"
+  },
+  {
+    "id": "2002",
+    "title": "Profile Picture Upload Error",
+    "description": "Users cannot upload profile pictures larger than 2MB.",
+    "customer": "NextWave Media",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2026-04-01T11:45:00Z"
+  },
+  {
+    "id": "2003",
+    "title": "Search Bar Not Responding",
+    "description": "Clicking the search icon does not trigger the search functionality.",
+    "customer": "CityBook Store",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-04-02T08:10:00Z"
+  },
+  {
+    "id": "2004",
+    "title": "Dashboard Widgets Overlapping",
+    "description": "Widgets overlap each other on smaller laptop screens.",
+    "customer": "Orbit Analytics",
+    "priority": "Low",
+    "status": "Backlog",
+    "createdAt": "2026-04-02T13:35:00Z"
+  },
+  {
+    "id": "2005",
+    "title": "Order History Missing Items",
+    "description": "Some purchased items are not appearing in the user's order history.",
+    "customer": "FreshMart Online",
+    "priority": "Critical",
+    "status": "In Progress",
+    "createdAt": "2026-04-03T10:00:00Z"
+  },
+  {
+    "id": "2006",
+    "title": "Language Switcher Bug",
+    "description": "Changing language resets the page to the homepage unexpectedly.",
+    "customer": "Global Learn Hub",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2026-04-03T15:20:00Z"
+  },
+  {
+    "id": "2007",
+    "title": "Payment Gateway Timeout",
+    "description": "Checkout process times out while connecting to the payment gateway.",
+    "customer": "TravelNest",
+    "priority": "Critical",
+    "status": "Open",
+    "createdAt": "2026-04-04T09:50:00Z"
+  },
+  {
+    "id": "2008",
+    "title": "Broken Image Links",
+    "description": "Several product images are not loading on the catalog page.",
+    "customer": "StyleStreet",
+    "priority": "Low",
+    "status": "Resolved",
+    "createdAt": "2026-04-04T12:30:00Z"
+  },
+  {
+    "id": "2009",
+    "title": "Notification Badge Count Incorrect",
+    "description": "Notification icon shows incorrect unread message count.",
+    "customer": "ConnectPlus",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2026-04-05T08:40:00Z"
+  },
+  {
+    "id": "2010",
+    "title": "Report Download Button Not Working",
+    "description": "Clicking the download button does not generate the requested report.",
+    "customer": "InsightPro",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-04-05T11:55:00Z"
+  }
+]
