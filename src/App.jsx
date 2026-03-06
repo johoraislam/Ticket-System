@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Banner from "./components/Banner/Banner"
 import Header from "./components/Header/Header"
-import { toast } from "react-toastify";
+import {ToastContainer, toast } from "react-toastify";
+import Tickets from "./components/Tickets/Tickets";
 
 
 function App() {
@@ -25,8 +26,8 @@ function App() {
 
   // HandleSelectedTicketState
   const handleSelectedTickets = (ticket) => {
-    const isExisting = selectedTickets.filter((t) => t.id === ticket.id);
-    if (isExisting.length === 0) {
+    const isExisting = selectedTickets.some((t) => t.id === ticket.id);
+    if (!isExisting) {
       setSelectedTickets([...selectedTickets, ticket]);
       toast.success("Ticket added to Task Status!", {
         position: "top-center",
@@ -34,8 +35,26 @@ function App() {
         theme: "colored",
       });
     } else {
-      setSelectedTickets(selectedTickets.filter((t) => t.id !== ticket.id));
-      toast.error("Ticket removed from Task Status!", {
+      toast.warn("Ticket is already in Task Status!", {
+        position: "top-center",
+        autoClose: 2000,
+        theme: "colored",
+      });
+    }
+  }
+
+  // HandleResolvedTicketState
+  const handleResolvedTickets = (ticket) => {
+    const isExisting = resolvedTicketsCount.some((t) => t.id === ticket.id);
+    if (!isExisting) {
+      setResolvedTicketsCount([...resolvedTicketsCount, ticket]);
+      toast.success("Ticket added to Resolved Status!", {
+        position: "top-center",
+        autoClose: 2000,
+        theme: "colored",
+      });
+    } else {
+      toast.warn("Ticket is already in Resolved Status!", {
         position: "top-center",
         autoClose: 2000,
         theme: "colored",
@@ -47,6 +66,15 @@ function App() {
     <>
       <Header />
       <Banner inProgressCount={selectedTickets.length} resolvedTicketsCount={resolvedTicketsCount.length} />
+      <Suspense fallback={<div className="text-center mt-10">Loading...</div>}>
+        <Tickets
+        allTickets={allTickets}
+        handleSelectedTicket={handleSelectedTickets}
+        selectedTickets={selectedTickets}
+        handleResolvedTicket={handleResolvedTickets}
+        resolvedTicketsCount={resolvedTicketsCount}
+      />
+      </Suspense>
 
 
       {/* ToastContainer */}
