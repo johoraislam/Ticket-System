@@ -3,6 +3,7 @@ import Banner from "./components/Banner/Banner"
 import Header from "./components/Header/Header"
 import {ToastContainer, toast } from "react-toastify";
 import Tickets from "./components/Tickets/Tickets";
+import Loader from "./components/Loader/Loader";
 
 
 function App() {
@@ -66,7 +67,7 @@ function App() {
     <>
       <Header />
       <Banner inProgressCount={selectedTickets.length} resolvedTicketsCount={resolvedTicketsCount.length} />
-      <Suspense fallback={<div className="text-center mt-10">Loading...</div>}>
+      <Suspense fallback={<Loader></Loader>}>
         <Tickets
         allTickets={allTickets}
         handleSelectedTicket={handleSelectedTickets}
