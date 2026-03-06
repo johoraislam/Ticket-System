@@ -24,4 +24,3 @@ Q5: How is event handling done in React?
 Answer:
 React-এ event handling করতে event name camelCase এ লিখতে হয়, যেমন onClick। Event handler হিসেবে একটি function pass করা হয়, যা event trigger হলে execute হয়।
 
-যদি চাও, আমি তোমাকে React interview এর সবচেয়ে common 20টা question + smart answer বানিয়ে দিতে পারি। এগুলো জানলে অনেক ইন্টারভিউ সহজ হয়ে যায়।
