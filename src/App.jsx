@@ -4,6 +4,7 @@ import Header from "./components/Header/Header"
 import {ToastContainer, toast } from "react-toastify";
 import Tickets from "./components/Tickets/Tickets";
 import Loader from "./components/Loader/Loader";
+import Footer from "./components/Footer/Footer";
 
 
 function App() {
@@ -77,7 +78,7 @@ function App() {
       />
       </Suspense>
 
-
+      <Footer/>
       {/* ToastContainer */}
       <ToastContainer />
     </>
